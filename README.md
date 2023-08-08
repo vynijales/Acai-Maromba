@@ -1,1 +1,2 @@
 # Acai-Maromba
+*.class
