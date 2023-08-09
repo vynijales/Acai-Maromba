@@ -1,10 +1,14 @@
 package classes;
-class Funcionario {
+
+import java.lang.reflect.Array;
+
+public class Funcionario {
     private String nome;
     private String cpf;
     private String senha;
     private boolean isAdmin;
     private static int totalFuncionarios;
+    private static Funcionario[] funcionarios;
 
     public Funcionario(String nome, String cpf, String senha, boolean isAdmin) {
         setNome(nome);
@@ -50,6 +54,13 @@ class Funcionario {
     }
     public boolean getIsAdmin() {
         return this.isAdmin;
+    }
+
+    public static int getTotalFuncionarios() {
+        return totalFuncionarios;
+    }
+    public static int listarFuncionarios(){
+        return Array.getLength(Funcionario.funcionarios); // Provisório
     }
 }
 
