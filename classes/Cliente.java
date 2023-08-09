@@ -1,9 +1,13 @@
 package classes;
+
+import java.lang.reflect.Array;
+
 public class Cliente{
     private String nome;
     private String endereco;
     private String cpf;
     private static int totalClientes;
+    private static Cliente[] clientes;
 
     public Cliente(String nome, String endereco, String cpf) {
         setNome(nome);
@@ -38,5 +42,8 @@ public class Cliente{
     }
     public static int getTotalClientes() {
         return totalClientes;
-    };
+    }; 
+    public static int listarClientes(){
+        return Array.getLength(Cliente.clientes); // Provisório
+    }
 }
