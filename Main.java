@@ -1,4 +1,5 @@
 import classes.Cliente;
+import classes.Funcionario;
 
 public class Main{
 
@@ -21,5 +22,12 @@ public class Main{
         print(matheus.getEndereco());
 
         System.out.println(Cliente.getTotalClientes());
+        print("=======================================");
+
+        Funcionario funcionario1 = new Funcionario("Pedro", "700.526.054-69", "12345678", false);
+        print(funcionario1.getNome());
+        print(funcionario1.getCpf());
+        print(funcionario1.getSenha());
+        print(Boolean.toString(funcionario1.getIsAdmin()));
     }
 }
