@@ -15,6 +15,7 @@ public class Funcionario {
         setCPF(cpf);
         setSenha(senha);
         setIsAdmin(isAdmin);
+        totalFuncionarios++;
     }
 
     public void setNome(String nome) {
@@ -27,7 +28,6 @@ public class Funcionario {
             this.cpf = cpf;
         }
     }
-
     private void setSenha(String senha) {
         if (senha != null && senha.length() >= 8) {
             this.senha = senha;
@@ -38,7 +38,6 @@ public class Funcionario {
             setCPF(senhaNova);
         }
     }
-
     public void setIsAdmin(boolean isAdmin) {
         this.isAdmin = isAdmin;
     }
