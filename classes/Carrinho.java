@@ -14,35 +14,28 @@ public class Carrinho {
 
     public Carrinho(Cliente cliente, Pedido[] pedidos, Adicional[] adicionais, double valorTotal, LocalDate data, boolean status) {
     }
-
     public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+        if (cliente != null) {this.cliente = cliente;}
     }
-
     public void setPedidos(Pedido[] pedidos) {
-        this.pedidos = pedidos;
+        if (pedidos != null) {this.pedidos = pedidos;} 
     }
-
     public void setAdicionais(Adicional[] adicionais) {
-        this.adicionais = adicionais;
+        if (adicionais != null) {this.adicionais = adicionais;} 
     }
-
     public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+        if (valorTotal >= 0.00) {this.valorTotal = valorTotal;}     
     }
-
     public void setData(LocalDate data) {
-        this.data = data;
+        this.data = data; // Não sei como manipular data ainda, portanto não colocarei condicionais
     }
-
     public void setStatus(boolean status) {
         this.status = status;
     }
-
+    
     public Cliente getCliente() {
         return this.cliente;
     }
-
     public Pedido[] getPedidos() {
         return this.pedidos;
     }
@@ -52,11 +45,9 @@ public class Carrinho {
     public double getValorTotal() {
         return this.valorTotal;
     }
-
     public LocalDate getDate() {
         return this.data;
     }
-
     public boolean getStatus() {
         return this.status;
     }
