@@ -9,7 +9,7 @@ public class Adicional {
     private static int totalAdicionais;
     private static Adicional[] adicionais;
 
-    public Adicional() {
+    public Adicional(String nome, int quantidade, double valor) {
         setNome(nome);
         setQuantidade(quantidade);
         setValor(valor);
